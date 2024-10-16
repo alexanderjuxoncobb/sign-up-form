@@ -18,30 +18,53 @@
       <div id="right">
         <div>
           <p>This is not a real online service. You need it.</p>
-          <p>You <em>know</em> that you want this.</p>
+          <p style="padding-bottom: 10%">
+            You <em>know</em> that you want this.
+          </p>
         </div>
         <div>
-          <form action="POST" id="myForm">
-            <div>
-              <label for="first-name">FIRST NAME</label>
-              <input type="text" name="first-name" id="first-name" />
-            </div>
+          <div
+            style="
+              padding: 10px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              gap: 10px;
+            "
+          >
+            <div style="padding: 10px; font-size: 1rem">Let's do this!</div>
+            <form action="POST" id="myForm">
+              <div>
+                <label for="first-name">FIRST NAME *</label>
+                <input
+                  type="text"
+                  name="first-name"
+                  id="first-name"
+                  placeholder=""
+                  required
+                />
+              </div>
 
-            <div>
-              <label for="last-name">LAST NAME</label><input type="text" />
-            </div>
-            <div><label for="email">EMAIL</label><input type="email" /></div>
-            <div><label for="number">NUMBER</label><input type="tel" /></div>
-            <div>
-              <label for="password">PASSWORD</label><input type="password" />
-            </div>
-            <div>
-              <label for="confirm-password">CONFIRM PASSWORD</label
-              ><input type="password" />
-            </div>
-          </form>
+              <div>
+                <label for="last-name">LAST NAME</label><input type="text" />
+              </div>
+              <div>
+                <label for="email">EMAIL *</label
+                ><input type="email" placeholder="" required /><span></span>
+              </div>
+              <div><label for="number">NUMBER</label><input type="tel" /></div>
+              <div>
+                <label for="password">PASSWORD *</label
+                ><input type="password" placeholder="" required />
+              </div>
+              <div>
+                <label for="confirm-password">CONFIRM PASSWORD *</label
+                ><input type="password" placeholder="" required />
+              </div>
+            </form>
+          </div>
         </div>
-        <div>3</div>
+        <div><button type="submit" form="myForm">Create Account</button></div>
       </div>
     </div>
   </body>
