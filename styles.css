@@ -2,6 +2,13 @@
   border: 1px solid red;
 }
 
+@font-face {
+  font-family: "Chunk";
+  src: url("./ChunkFive-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 #main-container {
   height: 100vh;
   display: flex;
@@ -10,7 +17,7 @@
 }
 
 #background-image {
-  width: 25%;
+  width: 35%;
   position: relative;
 }
 
@@ -25,9 +32,9 @@ img#pepe {
 }
 
 img#odin {
-  width: 50px;
+  width: min(4vw, 50px);
   height: auto;
-  margin-left: 20px;
+  margin-left: 10%;
 }
 
 #banner {
@@ -37,13 +44,76 @@ img#odin {
   top: 400px;
   width: 100%;
   text-align: center;
-  font-size: 3rem;
+  font-size: min(3.5vw, 48px);
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 #form {
+  /* flex: 1; */
+  font-family: "Chunk", sans-serif;
+  /* margin-left: auto; */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#right {
+  display: flex;
+  flex-direction: column;
+}
+
+#right > div {
   flex: 1;
+}
+
+#right > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 40px;
+}
+
+p {
+  margin: 0;
+  padding: 10px 0px 10px 40px;
+}
+
+#right > div:nth-child(2) {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4); /* Example shadow */
+}
+
+#right > div:last-child {
+  background-color: blue;
+}
+
+#myForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100%;
+  padding: 10px;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid rgb(130, 130, 130);
+  border-radius: 0.5rem;
+}
+
+label {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
 }
